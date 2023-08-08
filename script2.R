@@ -1,0 +1,8 @@
+map('world','south korea')
+install.packages("raster")
+library(raster)
+kor <- getData("GADM", country="KOR", level=1)
+plot(kor)
+alt <- getData("alt", country="FRA", mask=T)
+plot(alt)
+plot(kor, add=T)
